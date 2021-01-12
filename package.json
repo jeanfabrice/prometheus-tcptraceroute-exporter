@@ -1,0 +1,36 @@
+{
+  "author": {
+    "name": "Jean-Fabrice",
+    "email": "github@bobo-rousselin.com"
+  },
+  "description": "Prometheus tcp traceroute exporter",
+  "engines": {
+    "node": ">=12.4.1"
+  },
+  "license": "MIT",
+  "name": "prometheus-tcptraceroute-exporter",
+  "private": true,
+  "repository": "https://github.com/jeanfabrice/prometheus-tcptraceroute-exporter.git",
+  "scripts": {
+    "start": "node index",
+    "build:dev": "npx webpack --progress --colors --verbose --mode=development --config webpack.config.js",
+    "build:prod": "npx webpack --progress --colors --mode=production --config webpack.config.js",
+    "build:dockerimage": "node contrib/build-dockerimage"
+  },
+  "version": "1.0.2",
+  "dependencies": {
+    "commander": "~4.1.0",
+    "debug": "~4.1.1",
+    "express": "~4.17.1",
+    "merge-stream": "~2.0.0",
+    "prom-client": "~11.5.3",
+    "validator": "~12.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-loader": "^3.0.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
